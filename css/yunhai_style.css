@@ -1,0 +1,22 @@
+body {background-color: #ebecee;} /* #e6ebf0 */
+
+a {
+    color: #0a58ca;
+    text-decoration: none;
+}
+a:hover {
+    color: #6ca4f8;
+}
+
+section {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.rounded-5 {
+    border-radius: 0.5rem !important;
+}
