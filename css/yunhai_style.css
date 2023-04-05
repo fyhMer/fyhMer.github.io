@@ -17,6 +17,15 @@ section {
     margin-bottom: 2em;
 }
 
+html {
+    scroll-padding-top: 4.5em;
+}
+
+.popover {
+    font-family: 'Raleway';
+    z-index: 1000; /* show popover beneath the navbar */
+}
+
 .text-justify {
     text-align: justify !important;
 }

@@ -53,11 +53,11 @@
                         <h1> Yunhai Feng </h1>
                     </div>
                     <div class="col-sm-2 text-end">
-                        <a href="#" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="
+                        <a href="#" data-bs-toggle="popover" data-bs-trigger="hover" data-container="body" data-bs-content="
                             These charactersa are borrowed from <a href='https://en.wikipedia.org/wiki/Wen_Zhengming' target='_blank'>Wen Zhengming(文徵明)</a>'s 
                             calligraphy of <a href='https://en.wikipedia.org/wiki/Tengwang_Ge_Xu' target='_blank'><i>Tengwang Ge Xu</i> (滕王阁序)</a>, 
                             making up my Chinese name 冯云海. I'm a big fan of calligraphy. 
-                            I also like to play strategic games (bridge, Chinese chess) and sports (ping-pong, basketball). 
+                            I also like playing strategic games (bridge, Chinese chess) and sports (ping-pong, basketball). 
                             "><img alt="冯云海" src="images/fengyunhai_calligraphy.png" height="80px"></a>
 
                     </div>
@@ -220,7 +220,7 @@
 
     <!-- Footer -->
     <footer class="text-center py-2">
-        &copy; 2022 Yunhai Feng
+        &copy; 2022-2023 Yunhai Feng
     </footer>
 
     <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
@@ -229,6 +229,15 @@
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
           return new bootstrap.Popover(popoverTriggerEl, {html: true})
         })
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DRC2LCES8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3DRC2LCES8');
     </script>
 </body>
 </html>
