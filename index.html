@@ -13,20 +13,38 @@
     <title>Yunhai Feng</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yunhai Feng at CS department of Nanjing University">
+    <meta name="description" content="Yunhai Feng, MSCS at UCSD">
     <meta name="keywords" content="Yunhai Feng, UCSD, UC San Diego, Nanjing, NJU, CS, Robotics, Reinforcement Learning, Computer Vision">
     <meta name="author" content="Yunhai Feng">
     
     <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type="text/css">
+    <!-- TODO -->
+    <!-- <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type="text/css"> -->
     <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/yunhai_style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
+<script>
+    function toggleblock(blockId) {
+        var block = document.getElementById(blockId);
+        if (block.style.display == 'none') {
+            block.style.display = 'block';
+        } else {
+            block.style.display = 'none';
+        }
+    }
+
+    function hideblock(blockId) {
+        var block = document.getElementById(blockId);
+        block.style.display = 'none';
+    }
+</script>
 
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Yunhai Feng</a>
 
@@ -36,15 +54,17 @@
                     <a class="nav-link" aria-current="page" href="#sec-about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#sec-projects">Projects</a>
+                    <a class="nav-link" href="#sec-publications">Publications</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarMore" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     More
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark bg-dark" aria-labelledby="navbarMore">
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarMore">
+                        <li><a class="dropdown-item" href="#sec-projects">Projects</a></li>
                         <li><a class="dropdown-item" href="#sec-teaching">Teaching</a></li>
-                        <li><a class="dropdown-item" href="#sec-honors">Honors</a></li>
+                        <li><a class="dropdown-item" href="#sec-service">Service</a></li>
+                        <li><a class="dropdown-item" href="#sec-awards">Awards</a></li>
                     </ul>
                 </li>
                 </ul>
@@ -62,32 +82,42 @@
                         <h1> Yunhai Feng </h1>
                     </div>
                     <div class="col-sm-2 text-end">
-                        <a href="#" data-bs-toggle="popover" data-bs-trigger="hover" data-container="body" data-bs-content="
-                            These charactersa are borrowed from <a href='https://en.wikipedia.org/wiki/Wen_Zhengming' target='_blank'>Wen Zhengming(文徵明)</a>'s 
-                            calligraphy of <a href='https://en.wikipedia.org/wiki/Tengwang_Ge_Xu' target='_blank'><i>Tengwang Ge Xu</i> (滕王阁序)</a>, 
-                            making up my Chinese name 冯云海. I'm a big fan of calligraphy. 
-                            I also like playing strategic games (bridge, Chinese chess) and sports (ping-pong, basketball). 
-                            "><img alt="冯云海" src="images/fengyunhai_calligraphy.png" height="80px"></a>
-
+                        <h1>
+                            <a class="calligraphy" href="#" data-bs-toggle="popover" data-bs-trigger="hover" data-container="body" data-bs-content="
+                                These charactersa are borrowed from <a href='https://en.wikipedia.org/wiki/Wen_Zhengming' target='_blank'>Wen Zhengming(文徵明)</a>'s 
+                                calligraphy of <a href='https://en.wikipedia.org/wiki/Tengwang_Ge_Xu' target='_blank'><i>Tengwang Ge Xu</i> (滕王阁序)</a>, 
+                                making up my Chinese name 冯云海. I'm a big fan of calligraphy. 
+                                I also love playing strategic games (bridge, Chinese chess) and sports (ping-pong, basketball). 
+                                "><img alt="冯云海" src="images/fengyunhai_calligraphy.png" height="80px">
+                            </a>
+                        </h1>
                     </div>
                     
                 </div>
                 <div class="row align-items-center">
                     <div class="col-sm-8 text-justify px-lg-4">
                         <p class="text-end">
-                            <i class="fa-regular fa-envelope" aria-hidden="true"></i> Email: fyhMer <i class="fa fa-at" aria-hidden="true"></i> gmail.com 
+                            <i class="fa-regular fa-envelope" aria-hidden="true"></i> Email: <code class="email">yuf020<i class="fa fa-at" aria-hidden="true"></i>ucsd.edu</code>
                         </p>
-                        <p>Hi! I'm Yunhai, a first-year masters student at <a href="https://ucsd.edu" target="_blank"> UC San Diego</a>, 
-                            majoring in <a href="https://cse.ucsd.edu/" target="_blank">Computer Science</a>. 
+                        <p>Hi! I'm a masters student in <a href="https://cse.ucsd.edu/" target="_blank">Computer Science</a> 
+                            at <a href="https://ucsd.edu" target="_blank"> UC San Diego</a>, 
+                            advised by <a href="https://xiaolonw.github.io/index.html" target="_blank">Prof. Xiaolong Wang</a>. 
                             I'm broadly interested in <strong>Robotics</strong>, <strong>Reinforcement Learning</strong>, and <strong>Computer Vision</strong>. 
                             I aim to build intelligent systems that are robust and generalizable. </p>
-                        <p> I received my Bachelar's degree with honors from the National Elite Program in Computer Science at <a href="https://www.nju.edu.cn/EN/main.htm" target="_blank">Nanjing University</a>, 
+                        <p> I received my Bachelar's degree with honors from the National Elite Program of Computer Science 
+                            at <a href="https://www.nju.edu.cn/en/" target="_blank">Nanjing University</a>, 
                             where I worked with <a href="https://www.yuque.com/eyounx/home" target="_blank">Prof. Yang Yu</a> 
                             in <a href="http://www.lamda.nju.edu.cn/MainPage.ashx" target="_blank">Leaning And Mining from DatA (LAMDA) Group</a>.
-                            I was also fortunate to intern in <a href="https://ai.stanford.edu/" target="_blank">Stanford Artificial Intelligence Lab (SAIL)</a>, 
-                            supervised by <a href="https://sr.stanford.edu/?page_id=1217" target="_blank">Prof. Kenneth Salisbury</a>, and in <a href="https://www.icyphy.org/" target="_blank">iCyPhy Lab, UC Berkeley</a>, supervised by 
-                            <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/sangiovanni-vicentelli.html" target="_blank">Prof. Alberto Sangiovanni-Vincentelli</a> 
-                            and <a href="http://people.eecs.berkeley.edu/~xyyue/" target="_blank">Dr. Xiangyu Yue</a>.</p>       
+                            I was also fortunate to work with <a href="https://sr.stanford.edu/?page_id=1217" target="_blank">Prof. Kenneth Salisbury</a> 
+                            at <a href="https://ai.stanford.edu/" target="_blank">Stanford Artificial Intelligence Lab (SAIL)</a>, 
+                            <a href="https://linsats.github.io/" target="_blank">Prof. Lin Shao</a> 
+                            and <a href="http://people.eecs.berkeley.edu/~xyyue/" target="_blank">Prof. Xiangyu Yue</a>.</p>    
+                        <p class="text-center">
+                            <a class="btn btn-outline-light btn-sm" href="https://scholar.google.com/citations?user=VfEVlecAAAAJ&hl=en" target="_blank" ><i class="ai ai-google-scholar" aria-hidden="true"></i> Google Scholar</a> 
+                            <a class="btn btn-outline-light btn-sm" href="https://github.com/fyhMer" target="_blank" ><i class="fab fa-github" aria-hidden="true"></i> Github</a> 
+                            <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/yunhai-feng-bb478221b/" target="_blank" ><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a> 
+                            <a class="btn btn-outline-light btn-sm" href="https://twitter.com/yunhaif" target="_blank" ><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a>                             
+                        </p>   
                     </div>
                     <div class="col-sm-4">
                         <img alt="Yunhai's photo" src="images/photo.jpg" width="240px" class="rounded-5">
@@ -96,28 +126,81 @@
             </div>
         </section>
 
-        <!-- Section Projects -->
-        <section id="sec-projects">
-            <h2>Projects</h2>
+        <!-- Section Publications -->
+        <section id="sec-publications">
+            <h2>Research</h2>
 
             <div class="container">
-                <div class="row px-lg-4 align-items-center">
-                    <div class="col-md-3 p-lg-4">
+
+
+                <div class="row px-lg-4">
+                    <div class="col-md-3 py-3">
                         <img alt="SAM-RL" src="images/proj_SAM-RL.gif" class="rounded-5 img-fluid shadow">
                     </div>
                     <div class="col-md-8 text-justify p-lg-4">
-                        <h5>SAM-RL: Sensing-Aware Model-based Reinforcement Learning via Differentiable Physics-based Simulation and Rendering</h5>
-                        <p> 
-                            Jun Lv, <strong>Yunhai Feng</strong>, Cheng Zhang, Shuang Zhao, Lin Shao*, Cewu Lu* (*Equal advising)
-                        <p>[<a href="https://arxiv.org/abs/2210.15185" target="_blank">paper</a>]
-                            [<a href="https://sites.google.com/view/sam-rl" target="_blank">website</a>] 
-                            [<a href="https://www.youtube.com/watch?v=2xHNPlLVz8c" target="_blank">video</a>]
-
+                        <a class="title" href="https://sites.google.com/view/sam-rl" target="_blank">SAM-RL: Sensing-Aware Model-based Reinforcement Learning via Differentiable Physics-based Simulation and Rendering</a>
+                        <p> Jun Lv, <strong>Yunhai Feng</strong>, Cheng Zhang, Shuang Zhao, Lin Shao*, Cewu Lu* </p>
+                        <p><em>Proceedings of Robotics: Science and Systems (<strong>RSS</strong>), July 2023</em> </br>
+                            🏆<strong class="honor"> Best System Paper Award Finalist</strong>
+                        </p>
+                        <p>
+                            <a class="btn btn-outline-light btn-sm" href="https://arxiv.org/abs/2210.15185" target="_blank" ><i class="ai ai-arxiv" aria-hidden="true"></i> arXiv</a> 
+                            <a class="btn btn-outline-light btn-sm" href="https://sites.google.com/view/sam-rl" target="_blank" ><i class="fas fa-link" aria-hidden="true"></i> Website</a> 
+                            <a class="btn btn-outline-light btn-sm" href="https://www.youtube.com/watch?v=2xHNPlLVz8c" target="_blank" ><i class="fas fa-play" aria-hidden="true"></i> Video</a> 
+                            <a class="btn btn-outline-light btn-sm" href="javascript:toggleblock('lv2023sam_bib')"><i class="fas fa-quote-left" aria-hidden="true"></i> BibTeX</a>
+<pre class="bibtex" id="lv2023sam_bib">
+@inproceedings{lv2023sam,
+  title={SAM-RL: Sensing-Aware Model-Based Reinforcement Learning via Differentiable Physics-Based Simulation and Rendering},
+  author={Lv, Jun and Feng, Yunhai and Zhang, Cheng and Zhao, Shuang and Shao, Lin and Lu, Cewu},
+  booktitle={Proceedings of Robotics: Science and Systems (RSS)},
+  year={2023}
+}</pre>
+                            <script language="JavaScript">
+                                hideblock('lv2023sam_bib');
+                            </script>
                         </p>
                         <p>
                         </p>
                     </div>
                 </div>
+
+                <div class="row px-lg-4">
+                    <div class="col-md-3 py-3">
+                        <img alt="RGV3" src="images/rgv3_teaser.png" class="rounded-5 img-fluid shadow">
+                    </div>
+                    <div class="col-md-8 text-justify p-lg-4">
+                        <a class="title" href="https://yuanshenli.com/roller_grasper_v3.html" target="_blank">Design and Control of Roller Grasper V3 for In-Hand Manipulation</a>
+                        <p> Shenli Yuan, Lin Shao, <strong>Yunhai Feng</strong>, Jiatong Sun, Teng Xue, Connor Yako, Jeannette Bohg, Kenneth Salisbury </p>
+                        <p>
+                            <a class="btn btn-outline-light btn-sm" href="https://yuanshenli.com/roller_grasper_v3.html" target="_blank" ><i class="fas fa-link" aria-hidden="true"></i> Website</a> 
+                        </p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Section Projects -->
+        <section id="sec-projects">
+            <h2>Projects</h2>
+            <div class="container projects">
+                <div class="filmstrip">
+                    <img alt="Roller Grasper V3" src="images/proj_rgv3.gif" class="rounded-5 img-fluid shadow">
+                    <img alt="NeRF render" src="images/proj_NeRF.gif" class="rounded-5 img-fluid shadow">
+                    <img alt="Laikago demo" src="images/proj_Laikago.gif" class="rounded-5 img-fluid shadow">
+                    <img alt="multi-cloud demo" src="images/proj_multicloud.gif" class="rounded-5 img-fluid shadow">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Projects -->
+        <!-- <section id="sec-projects">
+            <h2>Projects</h2>
+
+            <div class="container">
 
                 <div class="row px-lg-4 align-items-center">
                     <div class="col-md-3 p-lg-4">
@@ -198,29 +281,41 @@
 
             </div>
 
-        </section>
+        </section> -->
 
         <!-- Section Teaching -->
         <section id="sec-teaching">
             <h2>Teaching</h2>
             <div class="container m-lg-3">
                 <ul>
-                    <li>Teaching Assistant: <a href="http://cslabcms.nju.edu.cn/problem_solving/index.php/2020%E7%BA%A7--%E5%AD%A6%E6%9C%9F%E5%AE%89%E6%8E%92_(%E7%AC%AC%E5%9B%9B%E5%AD%A6%E6%9C%9F)" target="_blank">Problem Solving (IV)</a>, 2022 Spring, Nanjing University</li>
-                    <li>Teaching Assistant: <a href="http://cslabcms.nju.edu.cn/problem_solving/index.php/2020%E7%BA%A7--%E5%AD%A6%E6%9C%9F%E5%AE%89%E6%8E%92_(%E7%AC%AC%E4%B8%89%E5%AD%A6%E6%9C%9F)" target="_blank">Problem Solving (III)</a>, 2021 Fall, Nanjing University</li>
+                    <li>Teaching Assistant: <a href="http://cslabcms.nju.edu.cn/problem_solving/index.php/2020%E7%BA%A7--%E5%AD%A6%E6%9C%9F%E5%AE%89%E6%8E%92_(%E7%AC%AC%E5%9B%9B%E5%AD%A6%E6%9C%9F)" target="_blank">Problem Solving (IV)</a> (2022 Spring), Nanjing University</li>
+                    <li>Teaching Assistant: <a href="http://cslabcms.nju.edu.cn/problem_solving/index.php/2020%E7%BA%A7--%E5%AD%A6%E6%9C%9F%E5%AE%89%E6%8E%92_(%E7%AC%AC%E4%B8%89%E5%AD%A6%E6%9C%9F)" target="_blank">Problem Solving (III)</a> (2021 Fall), Nanjing University</li>
                 </ul>
             </div>
         </section>
 
-        <!-- Section Honors -->
-        <section id="sec-honors">
-            <h2>Honors & Scholorships</h2>
+        <!-- Section Service -->
+        <section id="sec-service">
+            <h2>Service</h2>
             <div class="container m-lg-3">
                 <ul>
-                    <li>2022 Graduate Excellence Award</li>
-                    <li>2021 Special Scholarship for Fundamental Subjects</li>
-                    <li>2021 People's Scholarship (first prize)</li>
-                    <li>2020 National Elite Program Scholarship (first prize)</li>
-                    <li>2019 National Elite Program Scholarship (specialty prize)</li>
+                    <li>Conference reviewer: International Conference on Intelligent Robots and Systems (<strong>IROS</strong>), 2023</li>
+                    <li>Journal reviewer: IEEE Robotics and Automation Letters (<strong>RA-L</strong>)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section Awards -->
+        <section id="sec-awards">
+            <h2>Awards</h2>
+            <div class="container m-lg-3">
+                <ul>
+                    <li>Best System Paper Award Finalist, RSS 2023</li>
+                    <li>Graduate Excellence Award, 2022</li>
+                    <li>Special Scholarship for Fundamental Subjects, 2021</li>
+                    <li>People's Scholarship (first prize), 2021</li>
+                    <li>National Elite Program Scholarship (first prize), 2020</li>
+                    <li>National Elite Program Scholarship (specialty prize), 2019</li>
                 </ul>
             </div>
         </section>
