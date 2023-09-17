@@ -17,9 +17,9 @@
     <meta name="keywords" content="Yunhai Feng, UCSD, UC San Diego, Nanjing, NJU, CS, Robotics, Reinforcement Learning, Computer Vision">
     <meta name="author" content="Yunhai Feng">
     
-    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type="text/css">
+    <!-- <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type="text/css"> -->
     <!-- TODO -->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type="text/css"> -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type="text/css">
     <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/yunhai_style.css">
@@ -131,7 +131,36 @@
             <h2>Research</h2>
 
             <div class="container">
-
+                <div class="row px-lg-4">
+                    <div class="col-md-3 py-3">
+                        <img alt="owmcorl" src="images/owm_teaser.gif" class="rounded-5 img-fluid shadow">
+                    </div>
+                    <div class="col-md-8 text-justify p-lg-4">
+                        <a class="title" href="https://owmcorl.github.io" target="_blank">Finetuning Offline World Models in the Real World</a>
+                        <p> <strong>Yunhai Feng</strong>*, Nicklas Hansen*, Ziyan Xiong*, Chandramouli Rajagopalan, Xiaolong Wang </p>
+                        <p><em>Proceedings of the 7th Conference on Robot Learning (<strong>CoRL</strong>), November 2023</em> </br>
+                            <strong class="honor">Oral presentation</strong>
+                        </p>
+                        <p>
+                            <a class="btn btn-outline-light btn-sm" href="" target="_blank" ><i class="ai ai-arxiv" aria-hidden="true"></i> arXiv (coming soon)</a> 
+                            <a class="btn btn-outline-light btn-sm" href="https://openreview.net/forum?id=JkFeyEC6VXV" target="_blank" ><i class="fas fa-file" aria-hidden="true"></i> OpenReview</a> 
+                            <a class="btn btn-outline-light btn-sm" href="https://owmcorl.github.io" target="_blank" ><i class="fas fa-link" aria-hidden="true"></i> Website</a> 
+                            <a class="btn btn-outline-light btn-sm" href="javascript:toggleblock('feng2023finetuning_bib')"><i class="fas fa-quote-left" aria-hidden="true"></i> BibTeX</a>
+<pre class="bibtex" id="feng2023finetuning_bib">
+@inproceedings{feng2023finetuning,
+  title={Finetuning Offline World Models in the Real World},
+  author={Feng, Yunhai and Hansen, Nicklas and Xiong, Ziyan and Rajagopalan, Chandramouli and Wang, Xiaolong},
+  booktitle={Proceedings of the 7th Conference on Robot Learning (CoRL)},
+  year={2023}
+}</pre>
+                            <script language="JavaScript">
+                                hideblock('feng2023finetuning_bib');
+                            </script>
+                        </p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
 
                 <div class="row px-lg-4">
                     <div class="col-md-3 py-3">
@@ -166,6 +195,38 @@
 
                 <div class="row px-lg-4">
                     <div class="col-md-3 py-3">
+                        <img alt="ViPRoM" src="images/ViPRoM_demo_4x.gif" class="rounded-5 img-fluid shadow">
+                    </div>
+                    <div class="col-md-8 text-justify p-lg-4">
+                        <a class="title" href="https://explore-pretrain-robot.github.io" target="_blank">Exploring Visual Pre-training for Robot Manipulation: Datasets, Models and Methods</a>
+                        <p> Ya Jing*, Xuelin Zhu*, Xingbin Liu*, Qie Sima, Taozheng Yang,
+                            <strong>Yunhai Feng</strong>, Tao Kong </p>
+                        <p><em>Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (<strong>IROS</strong>), October 2023</em> </br>
+                            <em>CoRL 2022 Workshop on Pre-training for Robot Learning, December 2022</em>                        
+                        </p>
+                        <p>
+                            <a class="btn btn-outline-light btn-sm" href="https://arxiv.org/abs/2308.03620" target="_blank" ><i class="ai ai-arxiv" aria-hidden="true"></i> arXiv</a> 
+                            <a class="btn btn-outline-light btn-sm" href="https://explore-pretrain-robot.github.io" target="_blank" ><i class="fas fa-link" aria-hidden="true"></i> Website</a> 
+                            <a class="btn btn-outline-light btn-sm" href="https://explore-pretrain-robot.github.io/static/videos/IROS23_1113.mp4" target="_blank" ><i class="fas fa-play" aria-hidden="true"></i> Video</a> 
+                            <a class="btn btn-outline-light btn-sm" href="javascript:toggleblock('jing2023explore')"><i class="fas fa-quote-left" aria-hidden="true"></i> BibTeX</a>
+<pre class="bibtex" id="jing2023explore">
+@inproceedings{jing2023explore
+  author={Ya Jing, Xuelin Zhu, Xingbin Liu, Qie Sima, Taozheng Yang, Yunhai Feng, Tao Kong},
+  title={Exploring Visual Pre-training for Robot Manipulation: Datasets, Models and Methods},
+  booktitle={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2023}
+}</pre>
+                            <script language="JavaScript">
+                                hideblock('jing2023explore');
+                            </script>
+                        </p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row px-lg-4">
+                    <div class="col-md-3 py-3">
                         <img alt="RGV3" src="images/rgv3_teaser.png" class="rounded-5 img-fluid shadow">
                     </div>
                     <div class="col-md-8 text-justify p-lg-4">
@@ -173,6 +234,7 @@
                         <p> Shenli Yuan, Lin Shao, <strong>Yunhai Feng</strong>, Jiatong Sun, Teng Xue, Connor Yako, Jeannette Bohg, Kenneth Salisbury </p>
                         <p>
                             <a class="btn btn-outline-light btn-sm" href="https://yuanshenli.com/roller_grasper_v3.html" target="_blank" ><i class="fas fa-link" aria-hidden="true"></i> Website</a> 
+                            <a class="btn btn-outline-light btn-sm" href="https://www.youtube.com/watch?v=eP53rhPG7W4&t=51s" target="_blank" ><i class="fas fa-play" aria-hidden="true"></i> Video</a> 
                         </p>
                         <p>
                         </p>
