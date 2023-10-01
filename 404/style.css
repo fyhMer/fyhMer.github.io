@@ -1,0 +1,16 @@
+.notfound {
+    font-size: 1800%;
+    background: linear-gradient(to bottom, #e5c0fe, #c9c0fe, #b5d6f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer {
+    background-color: #f3f8ff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+}
