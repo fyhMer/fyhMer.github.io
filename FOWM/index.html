@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Finetuning Offline World Models in the Real World">
+  <meta name="keywords" content="Model-Based RL, Real-world Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finetuning Offline World Models in the Real World</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3DRC2LCES8"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3DRC2LCES8');
+  </script>
+
+  <!-- <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type="text/css"> -->
+  <!-- TODO -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway:500,600,600' rel='stylesheet' type="text/css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Finetuning Offline World Models in the Real World</h1>
+          <!-- <h2>CoRL 2023 (Oral)</h2> -->
+          <!-- corl -->
+          <h1 class="is-size-4 publication-venue has-text-centered">
+            <span style="color:#7b509a;font-weight:bolder;">CoRL 2023</span> <span style="color:#b44d92;font-weight:bolder;">(Oral)</span>
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yunhaifeng.com">Yunhai Feng</a><sup>1</sup>*,</span>
+            <span class="author-block">
+              <a href="https://nicklashansen.github.io">Nicklas Hansen</a><sup>1</sup>*,</span>
+            <span class="author-block">
+              <a href="https://ziyanx02.github.io">Ziyan Xiong</a><sup>12</sup>*,
+            </span>
+            <span class="author-block">
+              <a href="https://chamorajg.github.io">Chandramouli Rajagopalan</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://xiaolonw.github.io">Xiaolong Wang</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>UC San Diego</span>
+            <span class="author-block"><sup>2</sup>Tsinghua University</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">*Equal contribution</span>
+          </div>
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="teaser" height="50%" src="./static/images/teaser.png"/>
+        <h2 class="subtitle has-text-justified">
+          We propose a framework for offline pretraining and online finetuning of world models 
+          directly in the real world. Our method iteratively 
+          collects new data by planning with the learned model, and finetunes the model on a combination of 
+          pre-existing data and newly collected data. Our method can be finetuned few-shot on unseen task 
+          variations in ≤20 trials by leveraging novel test-time regularization during planning.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Reinforcement Learning (RL) is notoriously data-inefficient, which makes training on a real 
+            robot difficult. While model-based RL algorithms <em>(world models)</em> improve data-efficiency 
+            to some extent, they still require hours or days of interaction to learn skills. Recently, 
+            offline RL has been proposed as a framework for training RL policies on <em>pre-existing</em> 
+            datasets without any online interaction. However, constraining an algorithm to a fixed dataset 
+            induces a state-action distribution shift between training and inference, and limits its 
+            applicability to new tasks. In this work, we seek to get the best of both worlds: we consider 
+            the problem of pretraining a world model with offline data collected on a real robot, and then 
+            finetuning the model on online data collected by planning with the learned model. To mitigate 
+            extrapolation errors during online interaction, we propose to regularize the planner 
+            <em>at test-time</em> by balancing estimated returns and (epistemic) model uncertainty. We 
+            evaluate our method on a variety of visuo-motor control tasks in simulation and on a real 
+            robot, and find that our method enables few-shot finetuning to seen and unseen tasks even 
+            when offline data is limited.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section" >
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre class="bibtex"><code>@inproceedings{feng2023finetuning,
+  title={Finetuning Offline World Models in the Real World},
+  author={Feng, Yunhai and Hansen, Nicklas and Xiong, Ziyan and Rajagopalan, Chandramouli and Wang, Xiaolong},
+  booktitle={Proceedings of the 7th Conference on Robot Learning (CoRL)},
+  year={2023}
+}</code></pre>
+  </div>
+
+  <!-- <div class="container is-max-desktop content">
+    <h2 class="title">Contact</h2>
+    Feel free to contact <a href="mailto:yuf020@ucsd.edu">Yunhai Feng</a> if you have any questions on this project.
+  </div> -->
+</section>
+
+
+<footer class="footer is-centered">
+  <p>
+    Website template adapted from  <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>.
+  </p>
+</footer>
+
+</body>
+</html>
