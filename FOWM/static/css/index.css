@@ -159,10 +159,11 @@ a:hover {
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
-  border: 1px solid #bbb;
-  border-radius: 10px;
-  padding: 0;
-  font-size: 0;
+  /* border: 1px solid #bbb; */
+  /* border-radius: 10px; */
+  padding: 0px;
+  /* font-size: 0; */
+  text-align: center;
 }
 
 .results-carousel video {
