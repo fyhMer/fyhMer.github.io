@@ -203,3 +203,7 @@ a:hover {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.highlight-video-container {
+  background-color: #000;
+}
