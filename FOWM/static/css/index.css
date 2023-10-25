@@ -207,3 +207,11 @@ a:hover {
 .highlight-video-container {
   background-color: #000;
 }
+
+.video-caption {
+  color: white !important; 
+  text-align: justify;  
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
