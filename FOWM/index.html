@@ -19,12 +19,7 @@
       gtag('config', 'G-3DRC2LCES8');
   </script>
 
-  <!-- <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type="text/css"> -->
-  <!-- TODO -->
-  <link href='https://fonts.googleapis.com/css?family=Raleway:500,600,600' rel='stylesheet' type="text/css">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet"> -->
-
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:500,600,600' type="text/css">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -152,7 +147,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- <img id="teaser" height="50%" src="./static/images/teaser.png"/> -->
-      <video id="teaser_animation" autoplay controls muted playsinline height="100%">
+      <video poster="./static/images/teaser.png" id="teaser_animation" autoplay controls muted playsinline height="100%">
         <source src="./static/videos/animation.mp4"
                 type="video/mp4">
       </video>
@@ -228,25 +223,71 @@
 </section>
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container is-max-desktop ">
 
     <h2 class="title is-3">Tasks</h2>
 
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <div class="content has-text-justified">
-          <p>
-            We consider diverse tasks in simulation (D4RL, xArm, and quadruped locomotion) and on a real xArm robot.
-          </p>
+    <p>
+      We consider diverse tasks in simulation (D4RL, xArm, and quadruped locomotion) and on a real xArm robot.
+    </p>
+    <br/>
+    <h3 class="title is-5 has-text-centered is-centered">Real-World Tasks</h3>
+    <div class="container is-rounded interpolation-panel">  
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="" id="task-real-reach" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/reach0.mp4" type="video/mp4">
+          </video>
+          <p>Reach</p>
         </div>
-        <div class="content columns is-vcentered is-rounded interpolation-panel">
-          <div class="is-3 has-text-centered">
-            <img src="./static/images/tasks.png"
-            width="75%"
-                 alt="Tasks"/>
-          </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-kitchen" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/kitchen0.mp4" type="video/mp4">
+          </video>
+          <p>Kitchen</p>
         </div>
-        <br/>
+        <div class="column has-text-centered">
+          <video poster="" id="task-real-pick" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/pick0.mp4" type="video/mp4">
+          </video>
+          <p>Pick</p>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <h3 class="title is-5 has-text-centered is-centered">Simulation Tasks</h3>
+    <div class="container is-rounded interpolation-panel">  
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <video poster="" id="task-hopper" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/sim_task_hopper.mp4" type="video/mp4">
+          </video>
+          <p>Hopper</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-antmaze" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/sim_task_antmaze.mp4" type="video/mp4">
+          </video>
+          <p>AntMaze</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-xarm-push" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/sim_task_xarm_push.mp4" type="video/mp4">
+          </video>
+          <p>Push</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-xarm-lift" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/sim_task_xarm_lift.mp4" type="video/mp4">
+          </video>
+          <p>Pick</p>
+        </div>
+        <div class="column has-text-centered">
+          <video poster="" id="task-walk" autoplay muted playsinline loop width="80%">
+            <source src="./static/videos/sim_task_walk.mp4" type="video/mp4">
+          </video>
+          <p>Walk</p>
+        </div>
       </div>
     </div>
   </div>
@@ -283,7 +324,7 @@
           <p>
             Reach
           </p>
-          <video id="replay-video"
+          <video id="reach-finetune-video"
                   controls
                   muted
                   preload
@@ -297,7 +338,7 @@
           <p>
             Pick
           </p>
-          <video id="replay-video"
+          <video id="lift-finetune-video"
                   controls
                   muted
                   preload
@@ -340,42 +381,42 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
           Pick
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+          <video poster="" id="pick0" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/pick0.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item">
           Pick (unseen color)
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+          <video poster="" id="pick1" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/pick1.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item">
           Pick (with distractors)
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+          <video poster="" id="pick2" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/pick2.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-mask">
+        <div class="item">
           Reach
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+          <video poster="" id="reach0" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/reach0.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-coffee">
+        <div class="item">
           Reach (with distractor)
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+          <video poster="" id="reach1" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/reach1.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-toby">
+        <div class="item">
           Reach (unseen object)
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+          <video poster="" id="reach2" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/reach2.mp4"
                     type="video/mp4">
           </video>
@@ -411,7 +452,6 @@
     
     <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
           <!-- <h2 class="title is-3">Real-World Results</h2> -->
@@ -428,11 +468,8 @@
           </div>
         </div>
       </div>
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
       <div class="column">
-        <!-- <h2 class="title is-3">Matting</h2> -->
         <div class="columns is-centered">
           <div class="column content has-text-justified">
             <p>
